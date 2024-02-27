@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    --main-color: #1abc9c;
+    --second-color: #2C3E50;
+    --button-hover-bg: #4aa895;
+    --button-hover-active: #228470;
+}
+
+.home-body ::selection,
+.about-body ::selection {
+    background-color: var(--second-color);
+    color: white;
+}
+
+nav ::selection,
+footer ::selection,
+.portfolio-body ::selection,
+.contact-body ::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+nav,
+footer {
+    background-color: var(--second-color);
+}
+
+.home-body,
+.about-body {
+    background-color: var(--main-color)
+}
+
+.caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.caption div {
+    width: 90px;
+    height: 4px;
+}
+
+.about-body .caption div,
+.home-body .caption div {
+    background-color: white;
+}
+
+.portfolio-body .caption div,
+.contact-body .caption div {
+    background-color: var(--second-color);
+}

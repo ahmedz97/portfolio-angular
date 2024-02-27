@@ -1,0 +1,60 @@
+<section class="portfolio-body text-center pb-5">
+  <div class="header">
+    <h2 class="fs-1 fw-bolder mt-5">PORTFOLIO COMPONENT</h2>
+    <div class="caption">
+      <div></div>
+      <i class="fas fa-star mx-3"></i>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 gx-5 gy-4"
+        *ngFor="let imgSrc of imgArr; let i = index"
+      >
+        <div class="portfolio-item">
+          <figure>
+            <img
+              [src]="imgSrc"
+              class="w-100 rounded"
+              style="height: 300px"
+              alt="FayoumImg {{ i + 1 }}'"
+            />
+          </figure>
+          <div
+            (click)="showModal(imgSrc, i)"
+            class="portfolio-item-layer rounded"
+            data-bs-toggle="modal"
+            data-bs-target="#ImgModal"
+          >
+            <i class="fa fa-plus text-white"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Model  -->
+
+<div class="modal fade" id="ImgModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <i
+          (click)="prevModal()"
+          class="fa-solid fa-arrow-left text-white border fs-5 rounded-3"
+        ></i>
+        <figure>
+          <img [src]="imgSrc" class="w-100 rounded" [alt]="imgIndexAlt" />
+        </figure>
+        <i
+          (click)="nextModal()"
+          class="fa-solid fa-arrow-right text-white border fs-5 rounded-3"
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>

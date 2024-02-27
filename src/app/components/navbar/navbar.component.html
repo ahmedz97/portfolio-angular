@@ -1,0 +1,57 @@
+<nav
+  [ngClass]="{ 'py-0': isScrolled }"
+  class="navbar navbar-expand-lg text-uppercase sticky-top px-2 px-lg-0 fw-bolder"
+>
+  <div class="container p-2">
+    <a class="navbar-brand text-white fs-2" routerLink="home"
+      >Start Framework</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-4 mt-lg-0">
+        <li class="nav-item mb-3 mb-lg-0 me-3">
+          <a
+            class="nav-link d-inline-block p-2 rounded text-white"
+            routerLink="home"
+            routerLinkActive="bg-active-link"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item mb-3 mb-lg-0 me-3">
+          <a
+            class="nav-link d-inline-block p-2 rounded text-white"
+            routerLink="about"
+            routerLinkActive="bg-active-link"
+            >About</a
+          >
+        </li>
+        <li class="nav-item mb-3 mb-lg-0 me-3">
+          <a
+            class="nav-link d-inline-block p-2 rounded text-white"
+            routerLink="portfolio"
+            routerLinkActive="bg-active-link"
+            >Portfolio</a
+          >
+        </li>
+        <li class="nav-item mb-3 mb-lg-0 me-3">
+          <a
+            class="nav-link d-inline-block p-2 rounded text-white"
+            routerLink="contact"
+            routerLinkActive="bg-active-link"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

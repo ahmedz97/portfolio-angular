@@ -1,0 +1,20 @@
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.543);
+}
+
+nav {
+    padding: 15px 0;
+    transition: all .4s;
+}
+
+@media screen and (max-width:576px) {
+    .navbar-brand {
+        font-size: 20px !important;
+    }
+}
+
+.bg-active-link {
+    background-color: var(--main-color);
+}

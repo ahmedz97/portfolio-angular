@@ -1,0 +1,74 @@
+<section class="contact-body pb-5">
+  <div class="header text-center">
+    <h2 class="fs-1 fw-bolder mt-5">CONTACT COMPONENT</h2>
+    <div class="caption">
+      <div></div>
+      <i class="fas fa-star mx-3"></i>
+      <div></div>
+    </div>
+  </div>
+
+  <form class="w-50 mx-auto p-3 mt-5">
+    <div class="my-4 position-relative">
+      <label
+        for="input1"
+        [class]="nameFlag ? ' ms-2 bottom-100' : ' ms-2 bottom-0'"
+        >Enter your Name:</label
+      >
+      <input
+        type="text"
+        class="form-control py-3"
+        id="input1"
+        (keyup)="showLabel1($event)"
+        placeholder="Enter your Name"
+      />
+    </div>
+    <div class="my-4 position-relative">
+      <label
+        for="input2"
+        [class]="ageFlag ? ' ms-2 bottom-100' : ' ms-2 bottom-0'"
+        >Enter your Age:</label
+      >
+      <input
+        type="text"
+        class="form-control py-3"
+        id="input2"
+        (keyup)="showLabel2($event)"
+        placeholder="Enter your Age"
+      />
+    </div>
+    <div class="my-4 position-relative">
+      <label
+        for="input3"
+        [class]="emailFlag ? ' ms-2 bottom-100' : ' ms-2 bottom-0'"
+        >Enter your Email:</label
+      >
+      <input
+        type="email"
+        class="form-control py-3"
+        id="input3"
+        (keyup)="showLabel3($event)"
+        placeholder="Enter your Email"
+      />
+    </div>
+    <div class="my-4 position-relative">
+      <label
+        for="input4"
+        [class]="
+          passFlag ? 'text-start ms-2 bottom-100' : 'text-start ms-2 bottom-0'
+        "
+        >Enter your Password:</label
+      >
+      <input
+        type="password"
+        class="form-control py-3"
+        id="input4"
+        (keyup)="showLabel4($event)"
+        placeholder="Enter your Password"
+      />
+    </div>
+    <button class="btn btn-success d-flex justify-content-end">
+      Send Message
+    </button>
+  </form>
+</section>
